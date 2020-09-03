@@ -1,32 +1,42 @@
 function generateMarkdown(data) {
-  const gitHubImg = `https://github.com/${data.username}.png?size=100`;
+  const gitHubImg = `https://github.com/${data.username}.png?size=75`;
   return `
 # ${data.title}
 
-${data.badges}
+${data.badge}
+
+[![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
 ## Description
 
 ${data.description}
 
-## Table of Contents
+## Demo
 
--[Description](#Description)
--[Installation](#Installation)
--[Usage](#Usage)
--[License](#License)
--[Contributors](#Contributors)
--[Test](#Test)
--[Repository Link](#Repository)
--[GitHub Info](#GitHub)
+![Git](demo.gif)   
+[Video Link]
+()
+
+## Table of Contents
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributors](#Contributors)
+* [Test](#Test)
+* [Repository Link](#Repository)
+* [GitHub Info](#GitHub)
 
 ## Installation
+
+Open your repository in an integrated terminal. Run this command:
 
         ${data.installation}
 
 ## Usage
 
-${data.usage}
+The application will be invoked with the following command:
+
+        ${data.usage}
 
 ## License 
 
@@ -46,9 +56,11 @@ ${data.test}
 
 ## GitHub
 
-![Profile Image](${gitHubImg})
+[![Profile Image](${gitHubImg} "kellymedia profile image")](https://github.com/kellymedia)
+<br>
 -[Email me](mailto:michael@kelly.media)
-
+<br>
+https://img.shields.io/github/followers/kellymedia?label=Follow&style=social
 `;
 }
 
