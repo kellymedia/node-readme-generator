@@ -1,9 +1,11 @@
 function generateMarkdown(data) {
-  const gitHubImg = `https://github.com/${data.username}.png?size=100`;
+  const gitHubImg = `https://github.com/${data.username}.png?size=75`;
   return `
-# ${data.title}
+# **${data.title}**
 
-${data.badges}
+${data.badge}
+
+\n[![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
 ## Description
 
@@ -11,14 +13,14 @@ ${data.description}
 
 ## Table of Contents
 
--[Description](#Description)
--[Installation](#Installation)
--[Usage](#Usage)
--[License](#License)
--[Contributors](#Contributors)
--[Test](#Test)
--[Repository Link](#Repository)
--[GitHub Info](#GitHub)
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributors](#Contributors)
+* [Test](#Test)
+* [Repository Link](#Repository)
+* [GitHub Info](#GitHub)
 
 ## Installation
 
@@ -26,11 +28,13 @@ ${data.description}
 
 ## Usage
 
-${data.usage}
+        ${data.usage}
 
 ## License 
 
 ${data.license}
+
+${data.badge}
 
 ## Contributors
 
@@ -47,7 +51,8 @@ ${data.test}
 ## GitHub
 
 ![Profile Image](${gitHubImg})
--[Email me](mailto:michael@kelly.media)
+
+/n-[Email me](mailto:michael@kelly.media)
 
 `;
 }
