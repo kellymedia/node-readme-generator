@@ -60,7 +60,8 @@ ${data.test}
 <br>
 -[Email me](mailto:michael@kelly.media)
 <br>
-https://img.shields.io/github/followers/kellymedia?label=Follow&style=social
+![GitHub followers](https://img.shields.io/github/followers/kellymedia?label=follow&style=social)
+
 `;
 }
 
