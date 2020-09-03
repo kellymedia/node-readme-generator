@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const axios = require("axios");
-const generate = require("./utils/generateMarkdown");
+// const axios = require("axios");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+// Questions and prompts for the user to create a good README.md file
 function userPrompts() {
     return inquirer.prompt( [
         {
@@ -55,6 +55,7 @@ function userPrompts() {
     ]);
 };
 
+// Function to write the README.md file using Fs node module
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, "utf8", function(err) {
         if (err) {
@@ -64,6 +65,7 @@ function writeToFile(fileName, data) {
     });
 };
 
+// Send user responses to generateMarkdown.js so information can be inserted into README.md file
 async function init() {
     try {
         const userResponses = await userPrompts();
@@ -76,6 +78,9 @@ async function init() {
 };
 
 init();
+
+
+// Testing axios module
 
 // inquirer
 //     .prompt(questions)
