@@ -28,7 +28,7 @@ function userPrompts() {
         },
         {
             type: "input",
-            name: "installation",
+            name: "usage",
             message: "Please provide instructions for how to use this project once it is installed."
         },
         {
