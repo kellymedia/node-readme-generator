@@ -1,19 +1,23 @@
 function generateMarkdown(data) {
   const gitHubImg = `https://github.com/${data.username}.png?size=75`;
   return `
-# **${data.title}**
+# ${data.title}
 
 ${data.badge}
 
-\n[![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
+[![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
 ## Description
 
 ${data.description}
 
-## Table of Contents
+## Demo
 
-* [Description](#Description)
+![Git](demo.gif)   
+[Video Link]
+()
+
+## Table of Contents
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [License](#License)
@@ -24,17 +28,19 @@ ${data.description}
 
 ## Installation
 
+Open your repository in an integrated terminal. Run this command:
+
         ${data.installation}
 
 ## Usage
+
+The application will be invoked with the following command:
 
         ${data.usage}
 
 ## License 
 
 ${data.license}
-
-${data.badge}
 
 ## Contributors
 
@@ -50,10 +56,11 @@ ${data.test}
 
 ## GitHub
 
-![Profile Image](${gitHubImg})
-
-/n-[Email me](mailto:michael@kelly.media)
-
+[![Profile Image](${gitHubImg} "kellymedia profile image")](https://github.com/kellymedia)
+<br>
+-[Email me](mailto:michael@kelly.media)
+<br>
+https://img.shields.io/github/followers/kellymedia?label=Follow&style=social
 `;
 }
 
