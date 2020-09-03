@@ -13,6 +13,11 @@ function userPrompts() {
         },
         {
             type: "input",
+            name: "badge",
+            message: "Please provide links for badges to display."
+        },
+        {
+            type: "input",
             name: "description",
             message: "Please provide a brief description of this project."
         },
